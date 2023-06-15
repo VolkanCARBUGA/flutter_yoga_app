@@ -11,35 +11,26 @@ class CustomAppBar extends StatelessWidget {
     var size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: EdgeInsets.all(0),
+      padding: const EdgeInsets.only(left: 10.0,right: 10.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(children: [
-            Padding(
-              padding: EdgeInsets.all(appPadding/8),
+            Container(
+              decoration: BoxDecoration(
+                color: primary,
+                shape: BoxShape.circle,
+              ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: primary,
+                  color: white,
                   shape: BoxShape.circle,
                 ),
-                child: Padding(
-                  padding: EdgeInsets.all(appPadding/20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: white,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(appPadding/8),
-                      child: Center(
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage("assets/images/propic.jpeg"),
-                        ),
-                      ),
-                    ),
+                child: Center(
+                  child: CircleAvatar(
+                    backgroundImage:
+                        AssetImage("assets/images/propic.jpeg"),
                   ),
                 ),
               ),

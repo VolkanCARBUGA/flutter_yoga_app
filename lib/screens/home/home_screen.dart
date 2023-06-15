@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
         index: selectedIndex,
         buttonBackgroundColor: primary,
         height: 60,
-        color: Colors.white,
+        color: Colors.red,
         onTap: (value) {
           setState(() {
             selectedIndex = value;
